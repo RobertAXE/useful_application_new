@@ -49,7 +49,7 @@ def moves_from_room(state, depth):
     for r in range(4):
         room = rooms[r]
 
-        # ищем верхнего амфипода
+
         top_idx = None
         pod = None
         for i in range(depth):
@@ -61,7 +61,7 @@ def moves_from_room(state, depth):
         if pod is None:
             continue
 
-        # если комната уже в порядке, не двигаем
+
         ok = True
         for p in room:
             if p != "." and (ord(p) - ord("A")) != r:
@@ -73,7 +73,7 @@ def moves_from_room(state, depth):
         pos = ROOM_POS[r]
         cost_per_step = COST[pod]
 
-        # двигаемся влево и вправо
+
         for direction in (-1, 1):
             cur = pos
             while 0 <= cur + direction < 11:
@@ -111,7 +111,7 @@ def moves_from_hallway(state, depth):
         r = ord(pod) - ord("A")
         room = rooms[r]
 
-        # нельзя войти, если внутри есть чужие
+
         wrong_inside = False
         for p in room:
             if p != "." and p != pod:
