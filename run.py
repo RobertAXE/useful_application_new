@@ -183,7 +183,6 @@ def solve(lines):
 
 
 def main():
-    # Чтение входных данных
     lines = []
     for line in sys.stdin:
         lines.append(line.rstrip('\n'))
@@ -192,5 +191,6 @@ def main():
     print(result)
 
 # иии?
+# main
 if __name__ == '__main__':
     main()
